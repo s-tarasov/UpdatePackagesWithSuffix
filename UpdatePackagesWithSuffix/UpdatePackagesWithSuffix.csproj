@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>    
+    <PackageId>dotnet-update-packages-with-suffix</PackageId>
+    <PackageVersion>1.0.1-alpha</PackageVersion>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>$(PackageId)</ToolCommandName>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/s-tarasov/UpdatePackagesWithSuffix</PackageProjectUrl>
+    <Authors>starasov</Authors>
+    <Description>.NET Core Global Tool for update project packages with version suffix</Description>
+    <Summary>.NET Core Global Tool for update project packages with version suffix</Summary>
+
+    <RepositoryUrl>https://github.com/s-tarasov/UpdatePackagesWithSuffix</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGet.Protocol" Version="5.4.0" />
+    <PackageReference Include="System.CommandLine.DragonFruit" Version="0.3.0-alpha.20158.1" />
+  </ItemGroup>
+
+</Project>
