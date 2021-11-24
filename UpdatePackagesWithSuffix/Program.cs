@@ -5,7 +5,7 @@ namespace UpdatePackagesWithSuffix
 {
     class Program
     {       
-        static async Task Main(string suffix, string feedUrl, string projectFile)
+        static async Task Main(string suffix, string feedUrl, string projectFile, string username, string passwordText)
         {
             if (suffix == null || feedUrl == null || projectFile == null)
             {
@@ -13,7 +13,7 @@ namespace UpdatePackagesWithSuffix
                 return;
             }
 
-            var feed = new NugetFeed(feedUrl);
+            var feed = new NugetFeed(feedUrl, username, passwordText);
             var project = new ProjectFile(projectFile);
             foreach (var packageReference in project.PackageReferences)
             {
